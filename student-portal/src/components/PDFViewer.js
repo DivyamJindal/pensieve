@@ -13,12 +13,13 @@ function PDFViewer({ pdfUrl, feedback, onRegradeRequest }) {
 
   return (
     <div className="flex h-full">
-      <div className="flex-1 bg-gray-100 p-4 overflow-auto">
+      <div className="flex-1 bg-gray-100 p-4">
         <div className="bg-white rounded-lg shadow-lg p-4 h-full">
           <iframe
             src={pdfUrl}
             className="w-full h-full border-0"
             title="PDF Viewer"
+            style={{ minHeight: 'calc(100vh - 16rem)' }}
           />
         </div>
       </div>
